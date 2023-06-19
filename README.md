@@ -1,0 +1,13 @@
+//////////////////////////////////////////////////
+Installation nodejs
+//////////////////////////////////////////////////
+
+% npm init -y
+
+% npm install express ejs mysql
+
+% npm install -g nodemon
+
+% nodemon 
+
+% npm install express-session

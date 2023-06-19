@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Nitrocol</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users">Gestion utilisateurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products">Gestions des produits</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="text-center">Bienvenue <%= user.username %> dans le dashboard de Nitrocol</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                    <div class="card mt-5">
+                        <img src="<%= user.img %>" class="card-img-top" alt="<%= user.username %>">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= user.username %>
+                            </h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Prénom de l'utilisateur : <%= user.f_name %>
+                            </li>
+                            <li class="list-group-item">Nom de l'utilisateur : <%= user.l_name %>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
